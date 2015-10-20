@@ -1,0 +1,121 @@
+Classfile /I:/ClassFiles_003/CIS4324/MicroCompilerV1/EuclidDistance.class
+  Last modified Jun 12, 2015; size 804 bytes
+  MD5 checksum 43aa96205e0bbd93b37fae3bfa8eb6a9
+  Compiled from "EuclidDistance.mic"
+public class EuclidDistance
+  minor version: 3
+  major version: 45
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               SourceFile
+   #2 = Utf8               EuclidDistance.mic
+   #3 = Utf8               EuclidDistance
+   #4 = Class              #3             // EuclidDistance
+   #5 = Utf8               java/lang/Object
+   #6 = Class              #5             // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = NameAndType        #7:#8          // "<init>":()V
+  #10 = Methodref          #6.#9          // java/lang/Object."<init>":()V
+  #11 = Utf8               this
+  #12 = Utf8               LEuclidDistance;
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               Code
+  #15 = Utf8               x
+  #16 = Utf8               D
+  #17 = Utf8               y
+  #18 = Utf8               z
+  #19 = Utf8               java/util/Scanner
+  #20 = Class              #19            // java/util/Scanner
+  #21 = Utf8               java/lang/System
+  #22 = Class              #21            // java/lang/System
+  #23 = Utf8               in
+  #24 = Utf8               Ljava/io/InputStream;
+  #25 = NameAndType        #23:#24        // in:Ljava/io/InputStream;
+  #26 = Fieldref           #22.#25        // java/lang/System.in:Ljava/io/InputStream;
+  #27 = Utf8               (Ljava/io/InputStream;)V
+  #28 = NameAndType        #7:#27         // "<init>":(Ljava/io/InputStream;)V
+  #29 = Methodref          #20.#28        // java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+  #30 = Utf8               nextDouble
+  #31 = Utf8               ()D
+  #32 = NameAndType        #30:#31        // nextDouble:()D
+  #33 = Methodref          #20.#32        // java/util/Scanner.nextDouble:()D
+  #34 = NameAndType        #15:#16        // x:D
+  #35 = Fieldref           #4.#34         // EuclidDistance.x:D
+  #36 = NameAndType        #17:#16        // y:D
+  #37 = Fieldref           #4.#36         // EuclidDistance.y:D
+  #38 = Double             0.5d
+  #40 = Utf8               pow
+  #41 = Utf8               (DD)D
+  #42 = NameAndType        #40:#41        // pow:(DD)D
+  #43 = Utf8               java/lang/Math
+  #44 = Class              #43            // java/lang/Math
+  #45 = Methodref          #44.#42        // java/lang/Math.pow:(DD)D
+  #46 = NameAndType        #18:#16        // z:D
+  #47 = Fieldref           #4.#46         // EuclidDistance.z:D
+  #48 = Utf8               out
+  #49 = Utf8               Ljava/io/PrintStream;
+  #50 = NameAndType        #48:#49        // out:Ljava/io/PrintStream;
+  #51 = Fieldref           #22.#50        // java/lang/System.out:Ljava/io/PrintStream;
+  #52 = Utf8               println
+  #53 = Utf8               (D)V
+  #54 = NameAndType        #52:#53        // println:(D)V
+  #55 = Utf8               java/io/PrintStream
+  #56 = Class              #55            // java/io/PrintStream
+  #57 = Methodref          #56.#54        // java/io/PrintStream.println:(D)V
+  #58 = Utf8               main
+  #59 = Utf8               ([Ljava/lang/String;)V
+  #60 = Utf8               args
+  #61 = Utf8               [Ljava/lang/String;
+  #62 = Utf8               $in
+  #63 = Utf8               Ljava/util/Scanner;
+{
+  public EuclidDistance();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #10                 // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LEuclidDistance;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=6, locals=2, args_size=1
+         0: new           #20                 // class java/util/Scanner
+         3: dup
+         4: getstatic     #26                 // Field java/lang/System.in:Ljava/io/InputStream;
+         7: invokespecial #29                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+        10: astore_1
+        11: aload_1
+        12: invokevirtual #33                 // Method java/util/Scanner.nextDouble:()D
+        15: putstatic     #35                 // Field x:D
+        18: aload_1
+        19: invokevirtual #33                 // Method java/util/Scanner.nextDouble:()D
+        22: putstatic     #37                 // Field y:D
+        25: getstatic     #35                 // Field x:D
+        28: getstatic     #35                 // Field x:D
+        31: dmul
+        32: getstatic     #37                 // Field y:D
+        35: getstatic     #37                 // Field y:D
+        38: dmul
+        39: dadd
+        40: ldc2_w        #38                 // double 0.5d
+        43: i2d
+        44: invokestatic  #45                 // Method java/lang/Math.pow:(DD)D
+        47: putstatic     #47                 // Field z:D
+        50: getstatic     #51                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        53: getstatic     #47                 // Field z:D
+        56: invokevirtual #57                 // Method java/io/PrintStream.println:(D)V
+        59: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      60     0  args   [Ljava/lang/String;
+            0      60     1   $in   Ljava/util/Scanner;
+}
+SourceFile: "EuclidDistance.mic"

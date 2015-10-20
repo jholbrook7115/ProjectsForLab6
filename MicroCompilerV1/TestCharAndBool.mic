@@ -1,0 +1,11 @@
+program TestCharAndBool
+	char c1;
+	char c2;
+	bool b1;
+	bool b2;
+begin
+	c1 := 'x';
+	c2 := '\n';
+	b1 := true;
+	b2 := false;
+end;

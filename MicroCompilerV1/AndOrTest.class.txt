@@ -1,0 +1,271 @@
+Classfile /I:/ClassFiles_003/CIS4324/MicroCompilerV1/AndOrTest.class
+  Last modified Jun 12, 2015; size 806 bytes
+  MD5 checksum 3e810cd4a041c17e1ae6a152c5e88a7d
+  Compiled from "AndOrTest"
+public class AndOrTest
+  minor version: 3
+  major version: 45
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               SourceFile
+   #2 = Utf8               AndOrTest
+   #3 = Class              #2             // AndOrTest
+   #4 = Utf8               java/lang/Object
+   #5 = Class              #4             // java/lang/Object
+   #6 = Utf8               <init>
+   #7 = Utf8               ()V
+   #8 = NameAndType        #6:#7          // "<init>":()V
+   #9 = Methodref          #5.#8          // java/lang/Object."<init>":()V
+  #10 = Utf8               this
+  #11 = Utf8               LAndOrTest;
+  #12 = Utf8               LocalVariableTable
+  #13 = Utf8               Code
+  #14 = Utf8               java/lang/System
+  #15 = Class              #14            // java/lang/System
+  #16 = Utf8               out
+  #17 = Utf8               Ljava/io/PrintStream;
+  #18 = NameAndType        #16:#17        // out:Ljava/io/PrintStream;
+  #19 = Fieldref           #15.#18        // java/lang/System.out:Ljava/io/PrintStream;
+  #20 = Utf8               println
+  #21 = Utf8               (Z)V
+  #22 = NameAndType        #20:#21        // println:(Z)V
+  #23 = Utf8               java/io/PrintStream
+  #24 = Class              #23            // java/io/PrintStream
+  #25 = Methodref          #24.#22        // java/io/PrintStream.println:(Z)V
+  #26 = Double             4.0d
+  #28 = Double             2.0d
+  #30 = Double             3.0d
+  #32 = Utf8               main
+  #33 = Utf8               ([Ljava/lang/String;)V
+  #34 = Utf8               args
+  #35 = Utf8               [Ljava/lang/String;
+{
+  public AndOrTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #9                  // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LAndOrTest;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=5, locals=1, args_size=1
+         0: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iconst_1
+         4: iconst_2
+         5: if_icmpgt     12
+         8: iconst_0
+         9: goto          13
+        12: iconst_1
+        13: nop
+        14: dup
+        15: ifeq          30
+        18: pop
+        19: iconst_3
+        20: iconst_4
+        21: if_icmpgt     28
+        24: iconst_0
+        25: goto          29
+        28: iconst_1
+        29: nop
+        30: nop
+        31: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+        34: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        37: iconst_1
+        38: iconst_2
+        39: if_icmpgt     46
+        42: iconst_0
+        43: goto          47
+        46: iconst_1
+        47: nop
+        48: dup
+        49: ifeq          64
+        52: pop
+        53: iconst_3
+        54: iconst_4
+        55: if_icmplt     62
+        58: iconst_0
+        59: goto          63
+        62: iconst_1
+        63: nop
+        64: nop
+        65: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+        68: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        71: iconst_1
+        72: iconst_2
+        73: if_icmplt     80
+        76: iconst_0
+        77: goto          81
+        80: iconst_1
+        81: nop
+        82: dup
+        83: ifeq          98
+        86: pop
+        87: iconst_3
+        88: iconst_4
+        89: if_icmpgt     96
+        92: iconst_0
+        93: goto          97
+        96: iconst_1
+        97: nop
+        98: nop
+        99: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       102: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       105: iconst_1
+       106: iconst_2
+       107: if_icmplt     114
+       110: iconst_0
+       111: goto          115
+       114: iconst_1
+       115: nop
+       116: dup
+       117: ifeq          132
+       120: pop
+       121: iconst_3
+       122: iconst_4
+       123: if_icmplt     130
+       126: iconst_0
+       127: goto          131
+       130: iconst_1
+       131: nop
+       132: nop
+       133: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       136: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       139: iconst_1
+       140: iconst_2
+       141: if_icmpgt     148
+       144: iconst_0
+       145: goto          149
+       148: iconst_1
+       149: nop
+       150: dup
+       151: ifne          166
+       154: pop
+       155: iconst_3
+       156: iconst_4
+       157: if_icmpgt     164
+       160: iconst_0
+       161: goto          165
+       164: iconst_1
+       165: nop
+       166: nop
+       167: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       170: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       173: iconst_1
+       174: iconst_2
+       175: if_icmpgt     182
+       178: iconst_0
+       179: goto          183
+       182: iconst_1
+       183: nop
+       184: dup
+       185: ifne          200
+       188: pop
+       189: iconst_3
+       190: iconst_4
+       191: if_icmplt     198
+       194: iconst_0
+       195: goto          199
+       198: iconst_1
+       199: nop
+       200: nop
+       201: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       204: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       207: iconst_1
+       208: iconst_2
+       209: if_icmplt     216
+       212: iconst_0
+       213: goto          217
+       216: iconst_1
+       217: nop
+       218: dup
+       219: ifne          234
+       222: pop
+       223: iconst_3
+       224: iconst_4
+       225: if_icmpgt     232
+       228: iconst_0
+       229: goto          233
+       232: iconst_1
+       233: nop
+       234: nop
+       235: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       238: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       241: iconst_1
+       242: iconst_2
+       243: if_icmplt     250
+       246: iconst_0
+       247: goto          251
+       250: iconst_1
+       251: nop
+       252: dup
+       253: ifne          268
+       256: pop
+       257: iconst_3
+       258: iconst_4
+       259: if_icmplt     266
+       262: iconst_0
+       263: goto          267
+       266: iconst_1
+       267: nop
+       268: nop
+       269: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       272: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       275: dconst_1
+       276: iconst_2
+       277: i2d
+       278: dcmpg
+       279: ifgt          286
+       282: iconst_0
+       283: goto          287
+       286: iconst_1
+       287: nop
+       288: dup
+       289: ifeq          308
+       292: pop
+       293: iconst_3
+       294: i2d
+       295: ldc2_w        #26                 // double 4.0d
+       298: dcmpg
+       299: ifgt          306
+       302: iconst_0
+       303: goto          307
+       306: iconst_1
+       307: nop
+       308: nop
+       309: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       312: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       315: dconst_1
+       316: ldc2_w        #28                 // double 2.0d
+       319: dcmpg
+       320: ifgt          327
+       323: iconst_0
+       324: goto          328
+       327: iconst_1
+       328: nop
+       329: dup
+       330: ifeq          350
+       333: pop
+       334: ldc2_w        #30                 // double 3.0d
+       337: ldc2_w        #26                 // double 4.0d
+       340: dcmpl
+       341: iflt          348
+       344: iconst_0
+       345: goto          349
+       348: iconst_1
+       349: nop
+       350: nop
+       351: invokevirtual #25                 // Method java/io/PrintStream.println:(Z)V
+       354: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     355     0  args   [Ljava/lang/String;
+}
+SourceFile: "AndOrTest"

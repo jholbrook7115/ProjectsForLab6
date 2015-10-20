@@ -1,0 +1,51 @@
+Classfile /I:/ClassFiles/CIS4324/MicroCompilerV1/TestCharAndBool.class
+  Last modified Oct 13, 2015; size 347 bytes
+  MD5 checksum 31b5f5ebaa79d695b3d31e83509e2212
+  Compiled from "TestCharAndBool.mic"
+public class TestCharAndBool
+  minor version: 3
+  major version: 45
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               SourceFile
+   #2 = Utf8               TestCharAndBool.mic
+   #3 = Utf8               TestCharAndBool
+   #4 = Class              #3             // TestCharAndBool
+   #5 = Utf8               java/lang/Object
+   #6 = Class              #5             // java/lang/Object
+   #7 = Utf8               c1
+   #8 = Utf8               C
+   #9 = Utf8               c2
+  #10 = Utf8               b1
+  #11 = Utf8               Z
+  #12 = Utf8               b2
+  #13 = NameAndType        #7:#8          // c1:C
+  #14 = Fieldref           #4.#13         // TestCharAndBool.c1:C
+  #15 = NameAndType        #10:#11        // b1:Z
+  #16 = Fieldref           #4.#15         // TestCharAndBool.b1:Z
+  #17 = NameAndType        #12:#11        // b2:Z
+  #18 = Fieldref           #4.#17         // TestCharAndBool.b2:Z
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               args
+  #22 = Utf8               [Ljava/lang/String;
+  #23 = Utf8               LocalVariableTable
+  #24 = Utf8               Code
+{
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: bipush        120
+         2: putstatic     #14                 // Field c1:C
+         5: iconst_1
+         6: putstatic     #16                 // Field b1:Z
+         9: iconst_0
+        10: putstatic     #18                 // Field b2:Z
+        13: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     0  args   [Ljava/lang/String;
+}
+SourceFile: "TestCharAndBool.mic"
