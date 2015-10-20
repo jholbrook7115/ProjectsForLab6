@@ -299,6 +299,25 @@ public class ReferenceVisitor extends MicroBaseVisitor<Type> {
     public Type visitArithop(ArithopContext ctx) {
         Type lhsType = visit(ctx.expr(0));
         Type rhsType = visit(ctx.expr(1));
+        /*
+            8 Possible Inputs (ignoring void expr):
+                - char + char   :INVALID -> VOID
+                - char - char   :VALID -> return int
+                - char + int    :VALID -> return char
+                - char - int    :VALID -> return char
+                - int + int     :VALID -> return int
+                - int - int     :VALID -> return int
+                - int + char    :VALID -> return char
+                - int - char    :INVALID -> VOID
+        */
+        if(ctx.op.getText().contains("+") && (lhsType == CHAR) 
+                && (rhsType == CHAR)) {
+            return VOID;
+        } else if ((ctx.op.getText().contains("-")) && (lhsType == INT)
+                && (rhsType == CHAR)){
+            return VOID;
+        }
+        
         Type resultType = determineExpressionResult(lhsType, rhsType);
         if (VOID == resultType) {
             error(ctx, lhsType + " cannot be combined with " + rhsType);
@@ -322,6 +341,11 @@ public class ReferenceVisitor extends MicroBaseVisitor<Type> {
     public Type visitCompop(MicroParser.CompopContext ctx) {
         Type lhsType = visit(ctx.expr(0));
         Type rhsType = visit(ctx.expr(1));
+        if ((lhsType == CHAR) && (rhsType != CHAR)) {
+            return VOID;
+        } else if ((lhsType != CHAR) && (rhsType == CHAR)) {
+            return VOID;
+        }
         Type resultType = determineExpressionResult(lhsType, rhsType);
         if (resultType != VOID) {
             typeMap.put(ctx, BOOL);
@@ -381,12 +405,22 @@ public class ReferenceVisitor extends MicroBaseVisitor<Type> {
                         return INT;
                     } else if (REAL == rhsType) {
                         return REAL;
-                    } else {
+                    } else if (CHAR == rhsType){
+                        return CHAR;
+                    }else {
                         return VOID;
                     }
                 case REAL:
                     if ((REAL == rhsType) || (INT == rhsType)) {
                         return REAL;
+                    } else {
+                        return VOID;
+                    }
+                case CHAR:
+                    if (CHAR == rhsType) {
+                        return INT;
+                    } else if (INT == rhsType) {
+                        return CHAR;
                     } else {
                         return VOID;
                     }
