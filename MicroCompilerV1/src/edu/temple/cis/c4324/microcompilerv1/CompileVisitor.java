@@ -183,7 +183,7 @@ public class CompileVisitor extends MicroBaseVisitor<InstructionList> {
     public InstructionList visitArithop(ArithopContext ctx) {
         InstructionList il = cg.newInstructionList();
         il.append(visit(ctx.expr(0)));
-        il.append(visit(ctx.expr(1)));
+        il.append(visit(ctx.expr(1)));        
         il.addInstruction("op", ctx.op.getText(), "int");
         return il;
     }

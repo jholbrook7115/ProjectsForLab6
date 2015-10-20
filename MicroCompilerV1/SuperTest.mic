@@ -1,0 +1,28 @@
+program Supertest
+	int a;
+	int b;
+	int c;
+	
+	char d;
+	char e;
+	char f;
+	
+begin 
+	write('ArithOp Test For lhs INT and rhs INT');
+	a:= 4;
+	b:= 3;
+	write('Addition: ');
+	c:= a+b;
+	write(c);
+	write('Subtraction: ');
+	c:= a-b;
+	write(c);
+	
+	write('ArithOp Test For lhs CHAR and rhs CHAR');
+	d:= 'd';
+	e:= 'e';
+	write('Subtraction:');
+	f:= d - e;
+	write(f);
+	
+end;
