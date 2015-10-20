@@ -87,5 +87,5 @@ fragment DIGIT:     [0-9];
 ID:                 LETTER (LETTER | DIGIT)*;
 INT:                DIGIT+;
 FLOAT:              DIGIT+ '.' DIGIT*;
-CHAR:               '\''.*'\'';
+CHAR:               '\''.*?'\'';
 WS : [ \t\r\n]+ -> skip ;

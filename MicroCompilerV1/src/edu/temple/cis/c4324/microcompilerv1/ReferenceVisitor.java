@@ -283,7 +283,9 @@ public class ReferenceVisitor extends MicroBaseVisitor<Type> {
     
     @Override
     public Type visitParens(MicroParser.ParensContext ctx) {
-        return visit(ctx.expr());
+        Type resultType = visit(ctx.expr());
+        typeMap.put(ctx, resultType);
+        return resultType;
     }
 
     /**
